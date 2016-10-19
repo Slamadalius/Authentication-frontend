@@ -17,6 +17,13 @@ module.exports = {
     }]
   },
   resolve: {
+    root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './src/components',
+      './src/actions',
+      './src/reducers'
+    ],
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
