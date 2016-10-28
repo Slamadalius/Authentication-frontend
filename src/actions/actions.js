@@ -1,10 +1,18 @@
 import axios from 'axios';
-import { FETCH_USERS } from 'types';
 
-export function fetchUsers() {
-  const request = axios.get('https://jsonplaceholder.typicode.com/users');
-  return {
-    type: FETCH_USERS,
-    payload: request
+const ROOT_URL = 'http://localhost:3090';
+
+export function signinUser({ email, password }) {
+  return function (dispatch) {
+    //Submit email/password to the server
+    axios.post(`${ROOT_URL}/signin`, { email, password }); // {email:email, password:password}
+    
+    //if request is good...
+    //- Update state to indicate user is authenticated
+    //- Save the JWT token
+    //- Redirect to the route '/feature'
+
+    //if request is bad...
+    //- Show an error to the user
   };
 }

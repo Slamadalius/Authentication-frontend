@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import UserList from 'userList';
+
+import Header from 'header';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <UserList />
+        <Header/>
+        {this.props.children}
       </div>
     );
   }
