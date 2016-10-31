@@ -1,1 +1,1 @@
-BoilerPlate 2
+Client side authentication
